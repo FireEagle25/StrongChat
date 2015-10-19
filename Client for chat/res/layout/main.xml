@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:weightSum="1"
+              android:id="@+id/mainLayout">
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:id="@+id/scrollView"
+            android:layout_gravity="right"
+            android:layout_weight="1.00"
+            android:stackFromBottom="true"
+            android:transcriptMode="alwaysScroll" android:focusable="false">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/textView"
+                android:layout_weight="0.90"/>
+    </ScrollView>
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textForSentButton"
+                android:layout_toLeftOf="@id/mainLayout"
+                android:id="@+id/send"
+                android:layout_alignParentEnd="true" android:layout_alignParentTop="true"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/send"
+                android:id="@+id/editText" android:layout_alignParentStart="true" android:inputType="text"
+                android:layout_toEndOf="@id/send"/>
+        </RelativeLayout>
+</LinearLayout>
+

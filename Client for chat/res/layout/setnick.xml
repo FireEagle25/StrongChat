@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+    <LinearLayout android:orientation="vertical"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/linearLayout2"
+                  android:layout_below="@+id/linearLayout"
+                  android:layout_alignStart="@+id/linearLayout">
+
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceLarge"
+                  android:text="@string/serverIP"
+                  android:id="@+id/ipText"/>
+        <EditText android:layout_width="200dp"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/ipfield" android:inputType="text"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout"
+            android:paddingBottom="10dp" android:layout_alignParentTop="true" android:layout_alignParentLeft="false"
+            android:layout_alignWithParentIfMissing="false" android:layout_centerHorizontal="true">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/nick"
+                android:id="@+id/nickText"
+                />
+        <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/nickfield"
+                android:inputType="text"/>
+    </LinearLayout>
+    <Button
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/textForEnteryButton"
+            android:id="@+id/enterToChatButton"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" android:layout_alignParentBottom="true"/>
+</RelativeLayout>
